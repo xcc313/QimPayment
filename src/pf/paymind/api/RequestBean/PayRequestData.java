@@ -2,14 +2,12 @@ package pf.paymind.api.RequestBean;
 
 import QimCommon.utils.IdWorker;
 import QimCommon.utils.MD5;
-import com.sun.javafx.binding.StringFormatter;
 import pf.ProjectSettings;
 
 import java.net.InetAddress;
 
-public class JsPayRequestData extends RequestData {
-    public JsPayRequestData() throws Exception {
-        trxType = "WX_SCANCODE_JSAPI";
+public class PayRequestData extends RequestData {
+    public PayRequestData() throws Exception {
         orderIp = InetAddress.getLocalHost().getHostAddress().toString();
         orderNum = String.valueOf(new IdWorker(ProjectSettings.getIdWorkerSeed()).nextId());
         encrypt = "T1";

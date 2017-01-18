@@ -40,7 +40,11 @@
                 <param name="namespace">/hgesy</param>
             </result>
             <result name="PayMindWeixinScanCode" type="chain">
-                <param name="actionName">Pay!scanPay</param>
+                <param name="actionName">Pay!wxScanPay</param>
+                <param name="namespace">/paymind</param>
+            </result>
+            <result name="PayMindAliScanCode" type="chain">
+                <param name="actionName">Pay!aliScanPay</param>
                 <param name="namespace">/paymind</param>
             </result>
         </action>
@@ -62,7 +66,11 @@
                 <param name="namespace">/hgesy</param>
             </result>
             <result name="PayMindWeixinJsPay" type="chain">
-                <param name="actionName">Pay!jsPay</param>
+                <param name="actionName">Pay!wxJsPay</param>
+                <param name="namespace">/paymind</param>
+            </result>
+            <result name="PayMindAliJsPay" type="chain">
+                <param name="actionName">Pay!aliJsPay</param>
                 <param name="namespace">/paymind</param>
             </result>
         </action>

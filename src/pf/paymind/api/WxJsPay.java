@@ -1,14 +1,15 @@
 package pf.paymind.api;
 
-import pf.paymind.api.RequestBean.JsPayRequestData;
+import pf.paymind.api.RequestBean.PayRequestData;
 
 import java.util.Map;
 
-public class JsPay extends PayMindAPIWithSign {
+public class WxJsPay extends PayMindAPIWithSign {
     public final static String JSPAY_API = "http://real.izhongyin.com/middlepaytrx/wx/scanCommonCode";
 
-    public JsPay(JsPayRequestData jsPayRequestData) {
-        requestData_ = jsPayRequestData;
+    public WxJsPay(PayRequestData payRequestData) {
+        requestData_ = payRequestData;
+        requestData_.trxType = "WX_SCANCODE_JSAPI";
     }
 
     public String getPayUrl() {

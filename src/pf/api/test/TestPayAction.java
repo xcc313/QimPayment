@@ -86,9 +86,9 @@ public class TestPayAction extends AjaxActionSupport {
         JsPayRequestData jsPayRequestData = new JsPayRequestData();
         jsPayRequestData.mode = "SwiftPass";
         jsPayRequestData.id = getParameter("id").toString();
-        jsPayRequestData.body = getParameter("body").toString();
+        jsPayRequestData.body = "123";
         jsPayRequestData.total_fee = getParameter("total_fee").toString();
-        jsPayRequestData.method = "alipay.jspay";
+        jsPayRequestData.method = "weixin.jspay";
         jsPayRequestData.sign = Signature.generateSign(jsPayRequestData, jsPayRequestData.id);
         XStream xStreamForRequestPostData = new XStream(new DomDriver("UTF-8", new XmlFriendlyNameCoder("-_", "_")));
         String postDataXML = xStreamForRequestPostData.toXML(jsPayRequestData);
